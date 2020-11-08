@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   Book.create(req.body)
     .then(book => res.json({msg: 'Book added successfully'}))
-    .catch(err => res.status(404).json( error: 'Unable to add this book'));
+    .catch(err => res.status(404).json({error: 'Unable to add this book'}));
 });
 
 // @route Get api/books/:id
@@ -52,7 +52,9 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   Book.findByIdAndRemove(req.params.id, req.body)
     .then(book => res.json({msg: 'Book entry deleted successfully'}))
-    .catch(err => res.status.(404).json({error: 'No such book'}));
+    .catch(err => res.status(404).json({error: 'No such book'}));
+    
 });
 
 module.exports = router;
+
