@@ -48,7 +48,7 @@ router.put('/:id', (req, res) => {
 
 // @route GET api/books/:id
 // @description Delete book by id 
-//@access Public
+// @access Public
 router.delete('/:id', (req, res) => {
   Book.findByIdAndRemove(req.params.id, req.body)
     .then(book => res.json({msg: 'Book entry deleted successfully'}))

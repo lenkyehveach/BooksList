@@ -39,10 +39,10 @@ class UpdateBookInfo extends Component {
     e.preventDefault();
 
     const data = {
-      title = this.state.title,
-      isbn = this.state.isbn,
-      author = this.state.author,
-      description = this.state.description, 
+      title: this.state.title,
+      isbn: this.state.isbn,
+      author: this.state.author,
+      description: this.state.description, 
       published_date: this.state.published_date,
       publisher: this.state.publisher
     };

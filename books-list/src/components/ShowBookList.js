@@ -27,10 +27,10 @@ class ShowBookList extends Component {
     console.log("PrintBook: " + books);
     let bookList; 
     
-    if(!book) {
+    if(!books) {
       bookList = "There is no book record!";
     } else {
-      bookList = book.map((book, k) => 
+      bookList = books.map((book, k) => 
       <BookCard book={book} key={k} />
       );
     }
